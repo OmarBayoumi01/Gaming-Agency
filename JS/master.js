@@ -33,7 +33,7 @@ setInterval(() => {
   let randomNum = Math.floor(Math.random() * imgaArray.length);
 
   landingPage.style.backgroundImage = `url(../imgs/${imgaArray[randomNum]})`;
-}, 2000);
+}, 3000);
 
 let section = document.querySelector(".clients");
 
