@@ -1,0 +1,439 @@
+:root {
+  --main-color: #0ef;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.container {
+  /* width: 1170px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+/* Setiing box */
+.settings-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: #ffffff;
+  width: 200px;
+  height: 100vh;
+  z-index: 1000;
+  transition: 0.3s;
+}
+.open {
+  left: 0;
+}
+
+.toggle-settings {
+  position: absolute;
+  right: -32px;
+  top: 120px;
+  background-color: #ffffffb0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.settings-box .settings-container .option {
+  padding: 30px;
+}
+
+.settings-box .settings-container h4 {
+  margin: 0;
+  text-align: center;
+  margin: 20px;
+  color: rgba(0, 0, 0, 0.311);
+}
+
+.settings-box .settings-container ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.settings-box .settings-container .colors-list li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: inline-block;
+}
+
+.settings-box .settings-container .colors-list li:first-child {
+  background-color: #0ef;
+}
+.settings-box .settings-container .colors-list li:nth-child(2) {
+  background-color: rgba(255, 0, 0, 0.604);
+}
+.settings-box .settings-container .colors-list li:nth-child(3) {
+  background-color: rgba(255, 0, 128, 0.81);
+}
+.settings-box .settings-container .colors-list li:nth-child(4) {
+  background-color: rgba(0, 255, 13, 0.4);
+}
+
+.settings-box .settings-container .colors-list .active {
+  opacity: 1;
+}
+
+/* Setiing box */
+
+/* Start Landing */
+.landing-page {
+  min-height: 100vh;
+  background-image: url(../imgs/img-1.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.landing-page .overlay {
+  background-color: rgb(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.header-area {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header-area .logo {
+  padding: 25px;
+  font-weight: bold;
+}
+
+.header-area .links .active,
+.header-area .links li a:hover {
+  color: var(--main-color);
+}
+.header-area .links li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+.header-area .links {
+  list-style: none;
+  padding: 10px;
+}
+
+.header-area .links li {
+  display: inline-block;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  /* color: #0ef; */
+}
+
+.intro-text h1 {
+  font-size: 50px;
+  font-weight: lighter;
+  padding: 15px;
+}
+.intro-text h1 span {
+  color: var(--main-color);
+}
+
+.intro-text p {
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+/* End Landing */
+
+/* Start About */
+
+.about-us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+
+.about-us .about-info {
+  flex: 1;
+  padding: 30px;
+}
+.about-us .about-info h2 {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 0 0 25px;
+  color: var(--main-color);
+}
+.about-us .about-info p {
+  line-height: 1.8;
+  color: #777;
+  font-size: 18px;
+  margin: 0;
+}
+
+.about-us .img-box {
+  text-align: center;
+  flex: 1;
+}
+
+.about-us .img-box img {
+  width: 450px;
+  border-radius: 325px;
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .about-us .img-box img {
+    display: none;
+  }
+}
+/* End about  */
+
+/* Satrt client */
+.clients {
+  background-color: #eee;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.clients h2 {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 0 0 50px;
+  color: var(--main-color);
+  text-align: center;
+}
+.clients .client-box {
+  background-color: #fff;
+  display: flex;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.clients .client-box .client-name {
+  font-weight: bold;
+  width: 150px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.clients .client-box .progress {
+  width: calc(100% - 110px);
+  height: 25px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  position: relative;
+}
+
+.clients .client-box .progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  transition: all 0.3s;
+}
+
+/* End client */
+
+/* Start serv */
+.services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.services h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  margin: 0 0 60px;
+  color: var(--main-color);
+}
+
+.services .box-serv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+}
+
+.services .box-serv .box {
+  margin: 20px;
+  text-align: center;
+  /* background-color: #eee; */
+}
+.services .box-serv .box img {
+  width: 100px;
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+.services .box-serv .box h4 {
+  margin-top: 5px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.services .box-serv .box p {
+  line-height: 1.6;
+  color: #777;
+}
+
+.services .box-serv .box h4::after {
+  content: "";
+  position: absolute;
+  top: 150%;
+  left: 41%;
+  width: 100px;
+  height: 2px;
+  background-color: var(--main-color);
+}
+/* end serv */
+.contact {
+  min-height: 800px;
+  background-image: url(/imgs/contact.png);
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.contact .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.668);
+}
+.contact .container {
+  position: relative;
+  z-index: 2;
+}
+.contact h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  margin: 0 0 60px;
+  color: var(--main-color);
+}
+
+.contact form {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+}
+
+.contact form .left {
+  flex: 1;
+}
+
+.contact form .left input {
+  display: block;
+  width: 75%;
+  margin-bottom: 25px;
+  padding-right: 50px;
+  padding-left: 10px;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  border: 1px solid #777;
+  transition: 0.2s;
+}
+
+.contact form .left input:focus {
+  outline: 0;
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+.contact form .right {
+  flex: 1;
+}
+
+.contact form .right textarea {
+  display: block;
+  width: 100%;
+  height: 187px;
+  padding-left: 10px;
+  padding-top: 10px;
+  background: transparent;
+  border: 0;
+  border: 1px solid #777;
+  outline: 0;
+  margin-bottom: 15px;
+  transition: 0.2s;
+}
+
+.contact form .right textarea:focus {
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+.contact form .right input {
+  width: 100px;
+  height: 40px;
+  background-color: var(--main-color);
+  color: #777;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact form .right input:hover {
+  box-shadow: 0 0 20px var(--main-color);
+  color: #eee;
+}
+/* Contact Us  */
+
+/* Fotter  */
+
+footer {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-image: linear-gradient(to right, var(--main-color), #777);
+}
+footer h3 {
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+footer h3 span {
+  color: red;
+}
+/* Fotter  */
