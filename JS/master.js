@@ -40,7 +40,7 @@ let section = document.querySelector(".clients");
 let spans = document.querySelectorAll(".clients .client-box .progress span");
 
 window.onscroll = function () {
-  if (window.scrollY >= section.offsetTop) {
+  if (window.scrollY >= section.offsetTop - 350) {
     console.log("here");
     spans.forEach((span) => {
       span.style.width = span.dataset.progress;
