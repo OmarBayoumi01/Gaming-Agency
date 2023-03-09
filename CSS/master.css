@@ -437,3 +437,14 @@ footer h3 span {
   color: red;
 }
 /* Fotter  */
+@media (max-width: 768px) {
+  .contact form {
+    flex-direction: column-reverse;
+  }
+  .contact form .right {
+    margin-bottom: 20px;
+  }
+  .services .box-serv .box h4::after {
+    display: none;
+  }
+}
